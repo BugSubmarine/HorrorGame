@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckx5cn57w8jlp"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_id7jd"]
+[ext_resource type="Script" path="res://Scripts/head.gd" id="2_5fvqj"]
+[ext_resource type="Script" path="res://Scripts/SpotLight3D.gd" id="3_dfomc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dn8iv"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_22ats"]
+radial_segments = 14
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_id7jd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_dn8iv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_22ats")
+
+[node name="head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781314, 0)
+script = ExtResource("2_5fvqj")
+
+[node name="Camera3D" type="Camera3D" parent="head"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="head"]
+transform = Transform3D(0.995227, 0, 0.0975829, 0, 1, 0, -0.0975829, 0, 0.995227, 0.5, -0.4, 0)
+visible = false
+light_color = Color(1, 0.934106, 0.730178, 1)
+spot_range = 11.5195
+spot_angle = 25.0
+script = ExtResource("3_dfomc")

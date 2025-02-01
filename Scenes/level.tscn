@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://q7d27gj18f3g"]
+
+[ext_resource type="PackedScene" uid="uid://bdhcp2ugnrrkh" path="res://Scenes/ui.tscn" id="1_60dy2"]
+[ext_resource type="PackedScene" uid="uid://ckx5cn57w8jlp" path="res://Scenes/player.tscn" id="1_i2reb"]
+[ext_resource type="Script" path="res://Scenes/level.gd" id="1_los2o"]
+[ext_resource type="MeshLibrary" uid="uid://5mo4s82tt2uj" path="res://Scenes/meshLibrary.tres" id="5_6srpt"]
+[ext_resource type="PackedScene" uid="uid://fln08p4r22c3" path="res://Scenes/PauseMenu.tscn" id="5_wrb66"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vb7qn"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_fhroj"]
+sky_material = SubResource("ProceduralSkyMaterial_vb7qn")
+
+[sub_resource type="Environment" id="Environment_cfr3c"]
+background_mode = 2
+sky = SubResource("Sky_fhroj")
+ambient_light_color = Color(1, 0.934106, 0.730178, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.02
+tonemap_mode = 3
+glow_enabled = true
+fog_light_color = Color(1, 0.934106, 0.730178, 1)
+fog_light_energy = 0.02
+fog_density = 0.09
+
+[node name="level" type="Node3D"]
+script = ExtResource("1_los2o")
+
+[node name="player" parent="." instance=ExtResource("1_i2reb")]
+transform = Transform3D(-1, 0, -8.20783e-08, 0, 1, 0, 8.74228e-08, 0, -0.938866, -0.0265145, 1, 2.95811)
+
+[node name="UI" parent="." instance=ExtResource("1_60dy2")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_wrb66")]
+visible = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cfr3c")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.847122, 0.531399, 0, -0.531399, -0.847122, -8.53142, -0.568283, 7.76602)
+visible = false
+shadow_enabled = true
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.340049, -0.207564, -0.121252)
+mesh_library = ExtResource("5_6srpt")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(0, 2, 2, 65535, 2, 2, 0, 1, 2, 65535, 1, 2, 1, 3, 1441793, 2, 2, 1441793, 2, 1, 1, 1, 0, 1, 0, 65535, 1, 65535, 65535, 1048577, 65534, 0, 1048577, 65533, 1, 1048577, 65533, 2, 655361, 65534, 3, 655361, 0, 3, 1441795, 65535, 3, 655363, 65535, 4, 1048576, 0, 4, 1441792, 0, 5, 1441792, 65535, 5, 1048576, 65535, 6, 1048576, 65535, 7, 1048576, 65535, 8, 1048576, 0, 6, 1441792, 0, 7, 1441792, 0, 8, 1441792, 65534, 1, 1048579, 65534, 2, 655363, 65535, 0, 1048579, 0, 0, 3, 1, 1, 3, 1, 2, 1441795, 65534, 10, 1048581, 65534, 11, 1048580, 65534, 12, 1048580, 65534, 13, 655365, 65535, 9, 1048580, 65535, 10, 1048583, 65535, 11, 6, 65535, 12, 6, 65535, 13, 655364, 0, 9, 1441796, 0, 10, 7, 0, 11, 6, 0, 12, 6, 0, 13, 655364, 1, 10, 5, 1, 11, 1441796, 1, 12, 1441796, 1, 13, 1441797)
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
