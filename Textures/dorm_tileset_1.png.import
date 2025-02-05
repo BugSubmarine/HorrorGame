@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d32m7q6047uy0"
-path.s3tc="res://.godot/imported/dorm_tileset_DormAtlas_n.png-2c56f3cef7be05ef60993028ecb636b9.s3tc.ctex"
+uid="uid://dysecluv5bqac"
+path.s3tc="res://.godot/imported/dorm_tileset_1.png-88b162c09513b12bb690875f843088db.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://dorm_tileset_DormAtlas_n.png"
-dest_files=["res://.godot/imported/dorm_tileset_DormAtlas_n.png-2c56f3cef7be05ef60993028ecb636b9.s3tc.ctex"]
+source_file="res://Textures/dorm_tileset_1.png"
+dest_files=["res://.godot/imported/dorm_tileset_1.png-88b162c09513b12bb690875f843088db.s3tc.ctex"]
 
 [params]
 
@@ -26,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://dorm_tileset_DormAtlas_n.png"
+roughness/src_normal="res://Materials/dorm_tileset_1.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

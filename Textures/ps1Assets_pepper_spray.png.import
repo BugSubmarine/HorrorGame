@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dy515x6uxkbu1"
+path.s3tc="res://.godot/imported/ps1Assets_pepper_spray.png-30aac7df57ce15d38d7c77d5bb21d12f.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "9c4d18ff121416a24d93475b09cd5ae1"
+}
+
+[deps]
+
+source_file="res://Textures/ps1Assets_pepper_spray.png"
+dest_files=["res://.godot/imported/ps1Assets_pepper_spray.png-30aac7df57ce15d38d7c77d5bb21d12f.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmoh6jwxdgddf"]
+
+[ext_resource type="PackedScene" uid="uid://5mcfvjnu6nl0" path="res://Textures/assets1.glb" id="1_l2n83"]
+
+[node name="DormAssets" type="Node3D"]
+
+[node name="assets1" parent="." instance=ExtResource("1_l2n83")]
+
+[editable path="assets1"]
