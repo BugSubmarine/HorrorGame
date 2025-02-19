@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdsva653xs8g"]
+
+[ext_resource type="Script" path="res://string.gd" id="1_etpdm"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cbxws"]
+height = 1.01
+radius = 0.45
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_q2sx8"]
+
+[node name="Rope" type="Node3D"]
+script = ExtResource("1_etpdm")
+
+[node name="RopeSegment" type="RigidBody3D" parent="."]
+
+[node name="PinJoint3D" type="PinJoint3D" parent="RopeSegment"]
+
+[node name="PhysicalBone3D" type="PhysicalBone3D" parent="RopeSegment/PinJoint3D"]
+
+[node name="RopeSegment2" type="RigidBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.467048, 0.506602, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RopeSegment2"]
+transform = Transform3D(0.1, 2.66454e-15, 0, 4.44089e-16, -0.22, 0, 0, 0, 0.1, 0.506602, -1.46705, 0)
+shape = SubResource("CylinderShape3D_cbxws")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RopeSegment2/CollisionShape3D2"]
+transform = Transform3D(1, -1.42109e-14, 0, -1.77636e-15, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("TubeTrailMesh_q2sx8")
+
+[node name="PinJoint3D" type="PinJoint3D" parent="RopeSegment2"]
+
+[node name="PhysicalBone3D" type="PhysicalBone3D" parent="RopeSegment2/PinJoint3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RopeSegment2"]
+transform = Transform3D(-4.37114e-09, -0.22, 0, -0.1, 9.61651e-09, 0, 0, 0, 0.1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_cbxws")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RopeSegment2/CollisionShape3D"]
+mesh = SubResource("TubeTrailMesh_q2sx8")
