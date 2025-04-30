@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://08whhtpkqxn4"
+uid="uid://ckysjl2xx3k6m"
 path.s3tc="res://.godot/imported/assets1_drawers_texture.png-12833d782060452fe3dcaba3ab243fc7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "328fbe29996dd1ad86505d8539fd4c0e"
 }
 
 [deps]

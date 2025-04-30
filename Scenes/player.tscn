@@ -13,6 +13,7 @@ radial_segments = 14
 script = ExtResource("1_id7jd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.900578, 0, 0, 0, 1, 0, 0, 0, 0.748576, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dn8iv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]

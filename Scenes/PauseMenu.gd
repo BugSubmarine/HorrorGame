@@ -7,10 +7,12 @@ extends Control
 #func _ready():
 	#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
-@onready var pause_menu = $PauseMenu
+@onready var pause_menu = $"."
 
+func _ready():
+	print("In the ready function:", get_path())
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("pause"):
 		pauseMenu()
 

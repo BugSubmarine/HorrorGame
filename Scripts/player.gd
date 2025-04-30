@@ -7,7 +7,7 @@ var sprint_gain = .1
 var sprint_speed= 7.0
 const JUMP_VELOCITY = 4.5
 var sprint_slider
-
+var nearby_pickup : Node = null
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -17,6 +17,7 @@ func _ready():
 
 func _physics_process(delta):
 	# Add the gravity.
+	
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
@@ -25,12 +26,14 @@ func _process(delta):
 		sprint_slider.value = sprint_slider.value - sprint_drain * delta
 		if sprint_slider.value == sprint_slider.min_value:
 			speed = ORIGINAL_SPEED
+	
 	if speed != sprint_speed:
 		if sprint_slider.value < sprint_slider.max_value:
 			sprint_slider.value = sprint_slider.value + sprint_gain * delta
 		if sprint_slider.value == sprint_slider.max_value:
 			sprint_slider.visible = false
-
+			
+		
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY

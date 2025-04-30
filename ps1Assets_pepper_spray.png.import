@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpg15lwkynud2"
-path.s3tc="res://.godot/imported/tileset_atlas_n.png-cc9d3644dec522556533df63d197529e.s3tc.ctex"
+uid="uid://dhypcdbui8kwj"
+path.s3tc="res://.godot/imported/ps1Assets_pepper_spray.png-0281cef66d4364cb7be4e007701e5d74.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "9c4d18ff121416a24d93475b09cd5ae1"
+}
 
 [deps]
 
-source_file="res://tileset_atlas_n.png"
-dest_files=["res://.godot/imported/tileset_atlas_n.png-cc9d3644dec522556533df63d197529e.s3tc.ctex"]
+source_file="res://ps1Assets_pepper_spray.png"
+dest_files=["res://.godot/imported/ps1Assets_pepper_spray.png-0281cef66d4364cb7be4e007701e5d74.s3tc.ctex"]
 
 [params]
 
@@ -20,12 +23,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://tileset_atlas_n.png"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
